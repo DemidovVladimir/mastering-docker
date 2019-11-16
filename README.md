@@ -1,3 +1,6 @@
+#K8s cheat sheat
+https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+
 ##Updating the particular image:
 
 kubectl set image deployment/client-deployment client=vladimir050486/multi-client:v6
@@ -51,3 +54,8 @@ kubectl logs server-deployment-58dc7785c8-c4nd6
 ##Delecte kube service:
 
 kubectl delete service client-node-port  
+
+##Skaffold
+Used for watch mode of react client, working HMR with k8s
+
+skaffold.dev
