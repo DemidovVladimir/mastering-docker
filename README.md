@@ -1,61 +1,61 @@
-#K8s cheat sheat
+# K8s cheat sheat
 https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 
-##Updating the particular image:
+## Updating the particular image:
 
 kubectl set image deployment/client-deployment client=vladimir050486/multi-client:v6
 
-##Start minikube
+## Start minikube
 
-##Minikube ip
+## Minikube ip
 
-##Get into the minikube vm docker ps:
+## Get into the minikube vm docker ps:
 
 eval $(minikube docker-env)
 
 docker ps 
 
-##Apply chenages:
+## Apply chenages:
 
 kubectl apply -f k8s
 
-##Enable ingress:
+## Enable ingress:
 
 minikube addons enable ingress
 
-##Add password as a secret;
+## Add password as a secret;
 
 kubectl create secret generic pgpassword --from-literal PGPASSWORD=admin 
 
-##List secrets;
+## List secrets;
 
 kubectl get secrets
 
-##Check ingress:
+## Check ingress:
 
 kubectl get svc -n ingress-nginx  
 
-##Check persistent volumes:
+## Check persistent volumes:
 
 kubectl get pv
 
 kubectl describe storageclass  
 
-##Check persistent volumes claim:
+## Check persistent volumes claim:
 
 kubectl get pvc
 
 kubectl describe storageclass  
 
-##Logging particular pod:
+## Logging particular pod:
 
 kubectl logs server-deployment-58dc7785c8-c4nd6
 
-##Delecte kube service:
+## Delecte kube service:
 
 kubectl delete service client-node-port  
 
-##Skaffold
+## Skaffold
 Used for watch mode of react client, working HMR with k8s
 
 skaffold.dev
